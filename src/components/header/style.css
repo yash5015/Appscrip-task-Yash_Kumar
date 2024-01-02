@@ -1,0 +1,15 @@
+.headerContainer {
+  display: flex;
+  width: 100%;
+}
+
+.logoName p {
+  font-size: 36px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+}
+
+/* font-family: 'Adobe Caslon Pro', sans-serif; 
+font-family: 'Barlow', sans-serif;
+font-family: 'Inter', sans-serif; */
