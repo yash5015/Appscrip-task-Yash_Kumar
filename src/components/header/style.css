@@ -1,15 +1,57 @@
+/* font-family: 'Adobe Caslon Pro', sans-serif; 
+font-family: 'Barlow', sans-serif;
+font-family: 'Inter', sans-serif; */
+
 .headerContainer {
   display: flex;
   width: 100%;
+  height: 190px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--LIGHTGREY);
 }
-
-.logoName p {
+.brandingContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 70%;
+}
+.logoName {
   font-size: 36px;
   font-weight: 800;
   text-transform: uppercase;
   font-family: "Inter", sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
-/* font-family: 'Adobe Caslon Pro', sans-serif; 
-font-family: 'Barlow', sans-serif;
-font-family: 'Inter', sans-serif; */
+ul li,
+ul a {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  color: var(--BLACK);
+}
+.iconsContainer ul {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+}
+.menuLinks {
+  height: 30%;
+  display: flex;
+  justify-content: center;
+}
+.menuLinks ul {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+.menuLinks ul {
+  column-gap: 60px;
+}

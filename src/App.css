@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --WHITE: #ffffff;
+  --BLACK: #000000;
+  --LIGHTGREY: #e5e5e5;
+  --TEXT: #252020;
+  --TEXT_SECONDARY: #888792;
+  --TEXT_TERTIARY: #bfc8cd;
+}
+.wrapper {
+  width: 1500px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: 0 auto;
+}
+
+.borderBox {
+  border-bottom: 1px solid var(--LIGHTGREY);
+}
+.padV50 {
+  padding: 50px 0;
+}
+.padV20 {
+  padding: 20px 0;
+}

@@ -1,0 +1,34 @@
+.product-main {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.product-heading {
+  overflow: hidden;
+  color: var(--Text);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.product-sub {
+  color: var(--TEXT_SECONDARY);
+  font-size: 12px;
+  font-weight: 400;
+}
+.product-sub span {
+  text-decoration-line: underline;
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+}
+.product-disc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

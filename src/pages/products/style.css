@@ -1,0 +1,73 @@
+* {
+  font-family: "Barlow", sans-serif;
+  text-transform: uppercase;
+}
+
+.quoteContainer {
+  width: 100%;
+}
+.quoteHeading {
+  font-family: "Barlow", sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+}
+.quoteDescription {
+  width: 60%;
+  margin: 0 auto;
+  font-family: "Barlow", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.filterbarContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filterbarContainer .left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+}
+.totalItems {
+  font-weight: 700;
+}
+.hideFilterBtn {
+  display: flex;
+  align-items: center;
+  font-family: "Adobe Caslon Pro", sans-serif;
+  color: var(--TEXT_SECONDARY);
+  text-decoration: underline;
+}
+.filterbarContainer .right {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.sideBar {
+  display: flex;
+}
+.filterProductCardsWrapper {
+  display: flex;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  row-gap: 32px;
+  column-gap: 16px;
+}
+
+/* Media query */
+@media (min-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

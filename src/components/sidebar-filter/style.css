@@ -1,0 +1,51 @@
+.filtercontainer {
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+}
+.customizable {
+  display: flex;
+  align-items: center;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.showDropDown {
+  /* display: none; */
+}
+.showDropDown > p {
+  text-decoration: underline;
+  text-transform: lowercase;
+  color: var(--TEXT_TERTIARY);
+}
+label {
+  padding-left: 5px;
+}
+label,
+.heading p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+}
+input[type="checkbox"] {
+  border-radius: 0px;
+  border-color: var(--TEXT_SECONDARY);
+  width: 18px;
+  height: 18px;
+}
+
+.selectedOption > p {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+
+  margin: 5px 0 15px 0;
+}
+
+.type-optionCont {
+  display: flex;
+  align-items: center;
+  margin: 15px auto;
+}
