@@ -125,6 +125,9 @@ ul a {
     top: 20px;
     right: 20px;
   }
+  .closeBtn img {
+    width: 22px;
+  }
   .menuLinkssideNavbar {
     position: fixed;
     height: 100vh;
