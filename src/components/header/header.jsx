@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 const Header = () => {
+  const [showSideNavBar, setShowSideNavBar] = useState(false);
+
   return (
     <>
       <div className="top-banner">
@@ -24,8 +26,9 @@ const Header = () => {
           <div className="brandingContainer">
             <div className="logo">
               <img
+                onClick={() => setShowSideNavBar((prev) => !prev)}
                 src="/icons/menu-bar.svg"
-                className="imgStyle"
+                className="imgStyle menu-bar"
                 alt="menu-bar"
               />
               <img src="/icons/logo.svg" className="imgStyle" alt="logo" />
@@ -84,7 +87,15 @@ const Header = () => {
               </ul>
             </div>
           </div>
-          <div className="menuLinks">
+          <div className={`menuLinks${showSideNavBar ? "sideNavbar" : ""}`}>
+            <div
+              className="closeBtn"
+              onClick={() => {
+                setShowSideNavBar(false);
+              }}
+            >
+              <img src="/icons/close.svg" alt="" />
+            </div>
             <ul>
               <li>
                 <a href="#">shop</a>

@@ -34,3 +34,10 @@
 .padV10 {
   padding: 10px 0;
 }
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "../../components/header/header";
 import "./style.css";
 import ProductCard from "../../components/product-card/product-card";
@@ -10,12 +10,34 @@ const Products = () => {
   const [showFilter, setShowFilter] = useState(false);
   const [reccomClick, setReccomClick] = useState(false);
   const [stortingType, setStortingType] = useState("recommended");
+
   const handleFilterVisibility = () => {
     setShowFilter((prev) => !prev);
   };
+  const parentRef = useRef(null);
 
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (parentRef.current) {
+        const dropdownElement = parentRef.current;
+        if (!dropdownElement.contains(event.target)) {
+          setReccomClick(false);
+
+          console.log("click outside");
+        }
+      }
+    };
+
+    // if (showFilter) {
+    window.addEventListener("mousedown", handleOutsideClick);
+    // }
+
+    return () => {
+      window.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
   return (
-    <div>
+    <div ref={parentRef}>
       <Header />
 
       <div className="quoteContainer">
@@ -39,7 +61,9 @@ const Products = () => {
                 <div
                   className="hideFilterBtn"
                   role="button"
-                  onClick={handleFilterVisibility}
+                  onClick={() => {
+                    handleFilterVisibility();
+                  }}
                 >
                   <img src="/icons/arrow-left.svg" alt="left-arrow" />
                   <p style={{ paddingLeft: "5px" }} className="">
@@ -108,7 +132,7 @@ const Products = () => {
           <div className="filterProductCardsWrapper">
             {showFilter ? (
               <div className="sideBar">
-                <Filter />
+                <Filter handleFilterVisibility={handleFilterVisibility} />
               </div>
             ) : null}
             <div className={`productsContainer${showFilter ? "-75" : ""}`}>

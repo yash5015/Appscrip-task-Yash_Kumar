@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./style.css";
 import { filters } from "../../constants/filters";
-const Filter = () => {
+const Filter = ({ handleFilterVisibility }) => {
   const [dropdownVisible, setDropdownVisible] = useState(-1);
   const handleDropdown = (index) => {
     if (dropdownVisible === index) {
@@ -10,8 +10,30 @@ const Filter = () => {
       setDropdownVisible(index);
     }
   };
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (dropdownRef.current) {
+        const dropdownElement = dropdownRef.current;
+        if (!dropdownElement.contains(event.target)) {
+          // setShowFilter(false);
+          handleFilterVisibility();
+          console.log("click outside");
+        }
+      }
+    };
+
+    // if (showFilter) {
+    window.addEventListener("mousedown", handleOutsideClick);
+    // }
+
+    return () => {
+      window.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
   return (
-    <div className="filtercontainer">
+    <div className="filtercontainer" ref={dropdownRef}>
       <div className="borderBox padV15 customizable">
         <input type="checkbox" name="" id="custom" />
         <label htmlFor="custom">customizable</label>

@@ -9,12 +9,4 @@ export const productList = [
   { id: 8, img: "/img/p7.png", description: "Product Name" },
   { id: 9, img: "/img/p8.png", description: "Product Name" },
   { id: 10, img: "/img/p9.png", description: "Product Name" },
-  { id: 11, img: "/img/p10.png", description: "Product Name" },
-  { id: 12, img: "/img/p11.png", description: "Product Name" },
-  { id: 13, img: "/img/p12.png", description: "Product Name" },
-  { id: 14, img: "/img/p13.png", description: "Product Name" },
-  { id: 15, img: "/img/p14.png", description: "Product Name" },
-  { id: 16, img: "/img/p15.png", description: "Product Name" },
-  { id: 17, img: "/img/p16.png", description: "Product Name" },
-  { id: 18, img: "/img/p17.png", description: "Product Name" },
 ];

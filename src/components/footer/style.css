@@ -96,7 +96,13 @@ footer p {
   display: flex;
   column-gap: 10px;
 }
-
+.lgsrc {
+  display: flex;
+  flex-direction: column;
+}
+.mdsrc {
+  display: none;
+}
 .copyright p {
   font-size: 14px;
   font-weight: 400;
@@ -114,9 +120,21 @@ footer p {
   .inputsBtn button {
     width: 120px;
   }
+  .footerHeading {
+    font-size: 18px;
+  }
+  footer ul > li {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 690px) {
+  .lgsrc {
+    display: none;
+  }
+  .mdsrc {
+    display: block;
+  }
   .footerHeading {
     margin-bottom: 0;
   }
@@ -161,6 +179,9 @@ footer p {
     padding-top: 20px;
     flex-wrap: wrap;
     row-gap: 10px;
+  }
+  .socialAcc img {
+    margin-right: 10px;
   }
 }
 

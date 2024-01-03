@@ -43,7 +43,20 @@ const Footer = () => {
         </div>
         <hr />
         <div className="actionsLinksContainer">
-          <div className="mettaMuse">
+          <div className="mettaMuse lgsrc">
+            <div className="footerHeadingCont">
+              <p className="footerHeading">mettā muse</p>
+            </div>
+            <ul>
+              <li>About Us</li>
+              <li>Stories</li>
+              <li>Artisans</li>
+              <li>Boutiques</li>
+              <li>Contact Us</li>
+              <li>EU Compliances Docs</li>
+            </ul>
+          </div>
+          <div className="mettaMuse mdsrc">
             <div
               className="footerHeadingCont"
               onClick={() => setIsMettaMuse((prev) => !prev)}
@@ -66,7 +79,21 @@ const Footer = () => {
               </ul>
             ) : null}
           </div>
-          <div className="quickLinks">
+          <div className="quickLinks lgsrc">
+            <div className="footerHeadingCont">
+              <p className="footerHeading">Quick Links</p>
+            </div>
+            <ul>
+              <li>Orders & Shipping</li>
+              <li>Join/Login as a Seller</li>
+              <li>Payment & Pricing</li>
+              <li>Return & Refunds</li>
+              <li>FAQs</li>
+              <li>Privacy Policy</li>
+              <li>Terms & Conditions</li>
+            </ul>
+          </div>
+          <div className="quickLinks mdsrc">
             <div
               className="footerHeadingCont"
               onClick={() => setIsQuickLinks((prev) => !prev)}
@@ -91,7 +118,16 @@ const Footer = () => {
             ) : null}
           </div>
           <div className="followus">
-            <div className="socialLinksContainer">
+            <div className="socialLinksContainer lgsrc">
+              <div className="footerHeadingCont">
+                <p className="footerHeading">Follow Us</p>
+              </div>
+              <div className="socialAcc">
+                <img src="icons/Insta.svg" alt="" />
+                <img src="icons/linkedin.svg" alt="" />
+              </div>
+            </div>
+            <div className="socialLinksContainer mdsrc">
               <div
                 className="footerHeadingCont"
                 onClick={() => setIsFollowUs((prev) => !prev)}
