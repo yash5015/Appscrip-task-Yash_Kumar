@@ -79,3 +79,37 @@ ul a {
 .menuLinks ul {
   column-gap: 60px;
 }
+
+@media screen and (max-width: 690px) {
+  .iconsContainer ul {
+    column-gap: 6px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .iconsContainer ul {
+    column-gap: 6px;
+  }
+  .bannerWrapper .banner:not(:first-child) {
+    display: none;
+  }
+  .iconsContainer ul > li:nth-last-child(-n + 2) {
+    display: none;
+  }
+  .headerContainer {
+    height: 90px;
+    padding-bottom: 0;
+    align-items: center;
+  }
+  .menuLinks {
+    display: none;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+  .logo .menu-bar {
+    display: block;
+  }
+}

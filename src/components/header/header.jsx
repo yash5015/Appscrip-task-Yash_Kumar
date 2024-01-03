@@ -23,6 +23,11 @@ const Header = () => {
         <div className="wrapper width-100">
           <div className="brandingContainer">
             <div className="logo">
+              <img
+                src="/icons/menu-bar.svg"
+                className="imgStyle"
+                alt="menu-bar"
+              />
               <img src="/icons/logo.svg" className="imgStyle" alt="logo" />
             </div>
             <div className="logoName">

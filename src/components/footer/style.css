@@ -18,7 +18,7 @@ footer ul > li {
   text-align: left;
   margin: 20px auto;
 }
-p {
+footer p {
   font-size: 16px;
   font-weight: 400;
   text-align: left;
@@ -103,4 +103,79 @@ p {
   text-align: center;
   margin: 20px auto;
   text-transform: capitalize;
+}
+.mt20 {
+  margin-top: 20px;
+}
+@media screen and (max-width: 888px) {
+  .inputsBtn input {
+    width: 250px;
+  }
+  .inputsBtn button {
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .footerHeading {
+    margin-bottom: 0;
+  }
+  .footerHeadingCont {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footerHeadingCont img {
+    filter: invert(1);
+  }
+  .letterAndcontact {
+    flex-direction: column;
+  }
+  .quickLinks,
+  .followus,
+  .contactDetails {
+    margin-top: 50px;
+  }
+  .newsletter,
+  .contactUs,
+  .mettaMuse,
+  .quickLinks,
+  .socialLinksContainer {
+    padding-bottom: 30px;
+    border-bottom: 1px solid white;
+  }
+  .actionsLinksContainer {
+    flex-direction: column;
+  }
+  .inputsBtn input {
+    width: 384px;
+  }
+  .inputsBtn button {
+    width: 184px;
+  }
+  .contactUs p:not(:first-child) {
+    display: inline-block;
+    list-style-type: disc;
+    margin-right: 10px;
+  }
+  .payments {
+    padding-top: 20px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .inputsBtn input {
+    width: auto;
+    min-width: 100px;
+  }
+  .inputsBtn button {
+    width: 180px;
+  }
+  .inputsBtn button {
+    font-size: 14px;
+  }
+  footer p {
+    font-size: 14px;
+  }
 }

@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 const Footer = () => {
+  const [isMettaMuse, setIsMettaMuse] = useState(false);
+  const [isQuickLinks, setIsQuickLinks] = useState(false);
+  const [isFollowUs, setIsFollowUs] = useState(false);
   return (
     <footer>
       <div className="wrapper width-100">
@@ -41,34 +44,72 @@ const Footer = () => {
         <hr />
         <div className="actionsLinksContainer">
           <div className="mettaMuse">
-            <p className="footerHeading">mettā muse</p>
-            <ul>
-              <li>About Us</li>
-              <li>Stories</li>
-              <li>Artisans</li>
-              <li>Boutiques</li>
-              <li>Contact Us</li>
-              <li>EU Compliances Docs</li>
-            </ul>
+            <div
+              className="footerHeadingCont"
+              onClick={() => setIsMettaMuse((prev) => !prev)}
+            >
+              <p className="footerHeading">mettā muse</p>
+              {isMettaMuse ? (
+                <img src="/icons/arrow-up.svg" alt="" />
+              ) : (
+                <img src="/icons/arrow-down.svg" alt="" />
+              )}
+            </div>
+            {isMettaMuse ? (
+              <ul className={`${isMettaMuse ? "mt20" : ""}`}>
+                <li>About Us</li>
+                <li>Stories</li>
+                <li>Artisans</li>
+                <li>Boutiques</li>
+                <li>Contact Us</li>
+                <li>EU Compliances Docs</li>
+              </ul>
+            ) : null}
           </div>
           <div className="quickLinks">
-            <p className="footerHeading">Quick Links</p>
-            <ul>
-              <li>Orders & Shipping</li>
-              <li>Join/Login as a Seller</li>
-              <li>Payment & Pricing</li>
-              <li>Return & Refunds</li>
-              <li>FAQs</li>
-              <li>Privacy Policy</li>
-              <li>Terms & Conditions</li>
-            </ul>
+            <div
+              className="footerHeadingCont"
+              onClick={() => setIsQuickLinks((prev) => !prev)}
+            >
+              <p className="footerHeading">Quick Links</p>
+              {isQuickLinks ? (
+                <img src="/icons/arrow-up.svg" alt="" />
+              ) : (
+                <img src="/icons/arrow-down.svg" alt="" />
+              )}
+            </div>
+            {isQuickLinks ? (
+              <ul className={`${isQuickLinks ? "mt20" : ""}`}>
+                <li>Orders & Shipping</li>
+                <li>Join/Login as a Seller</li>
+                <li>Payment & Pricing</li>
+                <li>Return & Refunds</li>
+                <li>FAQs</li>
+                <li>Privacy Policy</li>
+                <li>Terms & Conditions</li>
+              </ul>
+            ) : null}
           </div>
           <div className="followus">
             <div className="socialLinksContainer">
-              <p className="footerHeading">Follow Us</p>
+              <div
+                className="footerHeadingCont"
+                onClick={() => setIsFollowUs((prev) => !prev)}
+              >
+                <p className="footerHeading">Follow Us</p>
+                {isFollowUs ? (
+                  <img src="/icons/arrow-up.svg" alt="" />
+                ) : (
+                  <img src="/icons/arrow-down.svg" alt="" />
+                )}
+              </div>
               <div className="socialAcc">
-                <img src="icons/Insta.svg" alt="" />
-                <img src="icons/linkedin.svg" alt="" />
+                {isFollowUs ? (
+                  <div className={`${isFollowUs ? "mt20" : ""}`}>
+                    <img src="icons/Insta.svg" alt="" />
+                    <img src="icons/linkedin.svg" alt="" />
+                  </div>
+                ) : null}
               </div>
             </div>
             <div className="paymentMethodsContainer">
