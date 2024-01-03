@@ -1,4 +1,6 @@
 .filtercontainer {
+  width: 100%;
+  padding: 0 10px;
 }
 
 .dropdown {
@@ -15,12 +17,18 @@
   margin-bottom: 5px;
 }
 .showDropDown {
-  /* display: none; */
+  display: inline-block;
+  /* height: auto; */
+}
+.hideDropDown {
+  display: none;
+  /* height: 0; */
 }
 .showDropDown > p {
   text-decoration: underline;
   text-transform: lowercase;
   color: var(--TEXT_TERTIARY);
+  margin: 10px auto;
 }
 label {
   padding-left: 5px;
@@ -40,8 +48,6 @@ input[type="checkbox"] {
 .selectedOption > p {
   font-family: "Barlow", sans-serif;
   font-size: 18px;
-
-  margin: 5px 0 15px 0;
 }
 
 .type-optionCont {

@@ -1,13 +1,36 @@
 /* font-family: 'Adobe Caslon Pro', sans-serif; 
 font-family: 'Barlow', sans-serif;
 font-family: 'Inter', sans-serif; */
-
+.top-banner {
+  font-family: "Barlow", sans-serif;
+  width: 100%;
+  background-color: var(--BLACK);
+  font-weight: 400;
+  text-align: left;
+  text-transform: lowercase;
+  color: var(--PRIMARY);
+  padding: 10px 0;
+}
+.bannerWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.banner {
+  display: flex;
+  column-gap: 10px;
+}
+.banner p {
+  text-transform: lowercase;
+  font-size: 18px;
+}
 .headerContainer {
   display: flex;
-  width: 100%;
   height: 190px;
-  padding: 10px 0;
+  padding-bottom: 10px;
   border-bottom: 1px solid var(--LIGHTGREY);
+}
+.width-100 {
+  width: 100%;
 }
 .brandingContainer {
   width: 100%;
@@ -17,14 +40,14 @@ font-family: 'Inter', sans-serif; */
   align-items: center;
   height: 70%;
 }
-.logoName {
+.logoName p {
   font-size: 36px;
   font-weight: 800;
   text-transform: uppercase;
   font-family: "Inter", sans-serif;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 ul li,
 ul a {
@@ -43,6 +66,7 @@ ul a {
   column-gap: 20px;
 }
 .menuLinks {
+  width: 100%;
   height: 30%;
   display: flex;
   justify-content: center;

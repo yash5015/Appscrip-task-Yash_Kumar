@@ -10,9 +10,10 @@
   --TEXT: #252020;
   --TEXT_SECONDARY: #888792;
   --TEXT_TERTIARY: #bfc8cd;
+  --PRIMARY: #eb4c6b;
 }
 .wrapper {
-  width: 1500px;
+  max-width: 1500px;
   padding-left: 50px;
   padding-right: 50px;
   margin: 0 auto;
@@ -26,4 +27,10 @@
 }
 .padV20 {
   padding: 20px 0;
+}
+.padV15 {
+  padding: 15px 0;
+}
+.padV10 {
+  padding: 10px 0;
 }

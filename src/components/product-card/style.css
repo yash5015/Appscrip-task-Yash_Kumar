@@ -1,5 +1,4 @@
 .product-main {
-  width: 300px;
   display: flex;
   flex-direction: column;
   row-gap: 10px;

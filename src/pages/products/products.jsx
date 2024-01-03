@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../components/header/header";
 import "./style.css";
 import ProductCard from "../../components/product-card/product-card";
 import { productList } from "../../constants/productList";
 import Filter from "../../components/sidebar-filter/filter";
+import { sortingList } from "../../constants/sortingList";
+import Footer from "../../components/footer/footer";
 const Products = () => {
+  const [showFilter, setShowFilter] = useState(false);
+  const [reccomClick, setReccomClick] = useState(false);
+  const [stortingType, setStortingType] = useState("recommended");
+  const handleFilterVisibility = () => {
+    setShowFilter((prev) => !prev);
+  };
+
   return (
     <div>
       <Header />
@@ -27,20 +36,68 @@ const Products = () => {
             <div className="filterbarContainer">
               <div className="left">
                 <p className="totalItems">3425 items</p>
-                <div className="hideFilterBtn">
+                <div
+                  className="hideFilterBtn"
+                  role="button"
+                  onClick={handleFilterVisibility}
+                >
                   <img src="/icons/arrow-left.svg" alt="left-arrow" />
                   <p style={{ paddingLeft: "5px" }} className="">
-                    hide filter
+                    {showFilter ? "hide filter" : "show filter"}
                   </p>
                 </div>
               </div>
-              <div className="right">
-                <p style={{ paddingRight: "5px" }}>RECOMMENDED</p>
-                <img
-                  src="/icons/arrow-down.svg"
-                  className="imgStyle"
-                  alt="language"
-                />
+              <div
+                className="right"
+                onClick={() => {
+                  setReccomClick((prev) => !prev);
+                }}
+              >
+                <div className="sortingOne">
+                  <p style={{ paddingRight: "5px" }}>{stortingType}</p>
+                  {reccomClick ? (
+                    <img
+                      src="/icons/arrow-down.svg"
+                      className="imgStyle"
+                      alt="language"
+                    />
+                  ) : (
+                    <img
+                      src="/icons/arrow-up.svg"
+                      className="imgStyle"
+                      alt="language"
+                    />
+                  )}
+                </div>
+
+                {reccomClick ? (
+                  <div className="reccDropDown">
+                    <ul>
+                      {sortingList.map((item) => (
+                        <li
+                          onClick={() => {
+                            setStortingType(item.type);
+                          }}
+                          className={`${
+                            stortingType === item.type
+                              ? "selectedSort"
+                              : "nonSelectedSort"
+                          }`}
+                        >
+                          {stortingType === item.type ? (
+                            <img
+                              src="/icons/check.svg"
+                              className="imgStyle"
+                              alt="check"
+                              style={{ paddingRight: "10px" }}
+                            />
+                          ) : null}
+                          {item.type}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>
@@ -49,12 +106,13 @@ const Products = () => {
       <div className="filterAndProducts">
         <div className="wrapper ">
           <div className="filterProductCardsWrapper">
-            <div className="sideBar">
-              <Filter />
-            </div>
-
-            <div className="productsContainer">
-              <div className="product-grid">
+            {showFilter ? (
+              <div className="sideBar">
+                <Filter />
+              </div>
+            ) : null}
+            <div className={`productsContainer${showFilter ? "-75" : ""}`}>
+              <div className={`product-grid-${showFilter ? 3 : 4}`}>
                 {productList.map((item, index) => (
                   <ProductCard index={index} product={item} />
                 ))}
@@ -63,6 +121,7 @@ const Products = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

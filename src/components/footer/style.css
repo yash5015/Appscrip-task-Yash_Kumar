@@ -1,0 +1,106 @@
+footer {
+  font-family: "Barlow", sans-serif;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  color: var(--WHITE);
+  background-color: var(--BLACK);
+  margin-top: 50px;
+}
+.width-100 {
+  width: 100%;
+}
+footer ul > li {
+  color: var(--WHITE);
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+  margin: 20px auto;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
+.smallText {
+  font-size: 12px;
+}
+.footerHeading {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.letterAndcontact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-top: 80px;
+  padding-bottom: 30px;
+}
+.inputsBtn {
+  width: 100%;
+  margin-top: 50px;
+}
+.inputsBtn input {
+  width: 384px;
+  height: 47px;
+  padding: 14px 24px;
+  gap: 8px;
+}
+.inputsBtn button {
+  width: 184px;
+  height: 48px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: black;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 18px;
+  font-weight: 500;
+}
+.inputsBtn button:hover {
+  cursor: pointer;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  flex: 0.65;
+}
+.currency {
+  margin-top: 50px;
+}
+.inputsBtn {
+  display: flex;
+  column-gap: 10px;
+}
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  flex: 0.35;
+}
+
+.actionsLinksContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding-bottom: 20px;
+}
+.socialLinksContainer {
+  margin-bottom: 50px;
+}
+.socialAcc,
+.payments {
+  display: flex;
+  column-gap: 10px;
+}
+
+.copyright p {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  margin: 20px auto;
+  text-transform: capitalize;
+}
